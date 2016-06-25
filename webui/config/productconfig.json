@@ -1,0 +1,164 @@
+{
+  "product": [
+    {
+      "productid": "marsapi",
+      "tasks": [
+        {
+          "JenkinsJobNameEn": "0-Deploy-Mars-Production-Environment",
+          "RequireTrigger": 1,
+          "Sequence": 0,
+          "ExecutionTimes": "N",
+          "JenkinsJobNameCn": "文件分发&Checksum",
+          "parameters": [
+            {
+              "name": "GUID",
+              "value": ""
+            },
+            {
+              "name": "targethosts",
+              "value": ""
+            },
+            {
+              "name": "targetdirectory",
+              "value": ""
+            },
+            {
+              "name": "mysqlConnectionString",
+              "value": "mysql -h 192.168.32.101 -uroot -p701701"
+            }
+          ]
+        },
+        {
+          "JenkinsJobNameEn": "1-Mars-Deployment-HostVerify",
+          "RequireTrigger": 0,
+          "Sequence": 1,
+          "ExecutionTimes": "N",
+          "JenkinsJobNameCn": "API校验－Host",
+          "parameters": [
+            {
+              "name": "GUID",
+              "value": ""
+            },
+            {
+              "name": "targethosts",
+              "value": ""
+            },
+            {
+              "name": "targetdirectory",
+              "value": ""
+            },
+            {
+              "name": "mysqlConnectionString",
+              "value": "mysql -h 192.168.32.101 -uroot -p701701"
+            }
+          ]
+        },
+        {
+          "JenkinsJobNameEn": "2-Mars-ProductionTest-API",
+          "RequireTrigger": 1,
+          "Sequence": 2,
+          "ExecutionTimes": "1",
+          "JenkinsJobNameCn": "API校验－线上",
+          "parameters": [
+            {
+              "name": "GUID",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productid": "marsws",
+      "tasks": [
+      ]
+    },
+    {
+      "productid": "marstest",
+      "tasks": [
+        {
+          "JenkinsJobNameEn": "0-deploy-job",
+          "RequireTrigger": 1,
+          "Sequence": 0,
+          "ExecutionTimes": "N",
+          "JenkinsJobNameCn": "文件分发&Checksum",
+          "parameters": [
+            {
+              "name": "GUID",
+              "value": ""
+            },
+            {
+              "name": "targethosts",
+              "value": ""
+            },
+            {
+              "name": "targetdirectory",
+              "value": ""
+            },
+            {
+              "name": "mysqlConnectionString",
+              "value": "mysql -h 192.168.32.101 -uroot -p701701"
+            }
+          ]
+        },
+        {
+          "JenkinsJobNameEn": "1-host-verify",
+          "RequireTrigger": 0,
+          "Sequence": 1,
+          "ExecutionTimes": "N",
+          "JenkinsJobNameCn": "API校验－Host",
+          "parameters": [
+            {
+              "name": "GUID",
+              "value": ""
+            },
+            {
+              "name": "targethosts",
+              "value": ""
+            },
+            {
+              "name": "targetdirectory",
+              "value": ""
+            },
+            {
+              "name": "mysqlConnectionString",
+              "value": "mysql -h 192.168.32.101 -uroot -p701701"
+            }
+          ]
+        },
+        {
+          "JenkinsJobNameEn": "2-api-test",
+          "RequireTrigger": 1,
+          "Sequence": 2,
+          "ExecutionTimes": "1",
+          "JenkinsJobNameCn": "API校验－线上",
+          "parameters": [
+            {
+              "name": "GUID",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "JenkinsJobNameEn": "3-api-test",
+          "RequireTrigger": 1,
+          "Sequence": 3,
+          "ExecutionTimes": "1",
+          "JenkinsJobNameCn": "第四个job",
+          "parameters": [
+            {
+              "name": "GUID",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "account": [
+    {
+      "username": "artifactory",
+      "password": "artifactory"
+    }
+  ]
+}

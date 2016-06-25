@@ -1,0 +1,13 @@
+{
+  "ws_port": 8086,
+  "token_redis_ip": "192.168.32.101",
+  "main_redis_ip": "192.168.32.101",
+
+  "liveapi_url": "http://ci.api.mars.changbaops.com/roomapi.php?kulvdebug=20160226",
+  "forbbidenword_file": "forbiddenwords.txt",
+  "bencheventpoolsize": 10,
+  "max_concurrent_http_conn": 48,
+  "max_processinnermsg_worker_count": 8,
+  "bencheventpoolsize": 10,
+  "emoji_file" : "emoji_unicode.data"
+}

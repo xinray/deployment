@@ -1,0 +1,17 @@
+.tableresult{
+	background:no-repeat center;
+	width:110px;
+}
+.title{
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	padding-top: 30px;
+}
+.page {
+	text-align: center;
+	padding:15px 0;
+}
+.result_picture{
+	width:100px;
+}

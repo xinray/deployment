@@ -1,0 +1,58 @@
+.first-line{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.first-line .left{
+	float: left;
+	width: 340px;
+	height: 430px;
+}
+.first-line .center{
+	margin-left:450px;
+	height: 510px;
+}
+.first-line .center .distinguish{
+	position: absolute;
+	top:145px;
+	bottom:470px;
+    overflow: scroll;
+    width:700px;
+	word-break:break-all;
+	word-wrap:normal;
+	background: lightslategray;
+}
+.first-line .right{
+	width:30%;
+	height: 20px;
+	background: #00BFFF;
+}
+.first-line .right .form-control{
+	height: 100%;
+}
+.second-line{
+	width: 100%;
+	line-height: 30px;
+	font-size: 14px;
+}
+.second-line .test-result{
+	text-align: center;
+}
+.third-line{
+	overflow: hidden;
+	margin-top: 20px;
+}
+.third-line .deploy{
+	width: 100px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	float: left;
+	background: lightslategray;
+}
+.third-line .deploy-process{
+	margin-left: 140px;
+	height: 30px;
+	background: #AFEEEE;
+	margin-bottom: 275px;
+}
+

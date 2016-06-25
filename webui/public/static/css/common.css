@@ -1,0 +1,54 @@
+* {
+    padding:0;
+    margin:0;
+}
+body{
+    line-height: 1.5;
+    font-family: arial, 'Microsoft Yahei', sans-serif;
+    background-color: rgb(241,241,241);
+    font-size: 12px !important;
+}
+thead{
+    background: lightslategray;
+}
+li{
+    list-style:none;
+    margin:0px;
+    padding: 0px;
+}
+th{
+    text-align:center;
+}
+td{
+    text-align:center;
+}
+.firstline{
+    margin-bottom: 20px;
+}
+.firstline .select-stage{
+    display:inline-block;
+}
+.firstline .select-stage .selectpicker{
+    width:100px;
+    line-height:40px;
+    background-color: lightblue;
+}
+.firstline .pageitem-num{
+    float: right;
+}
+.firstline .pageitem-num li{
+    float: left;
+    padding-right: 5px;
+}
+.firstline .pageitem-num li a{
+    float: left;
+    color: #000;
+}
+.firstline .pageitem-num .select a{
+    float: right;
+    color: green;
+}
+.label{
+    font-size: 15px;
+    line-height: 30px;
+}
