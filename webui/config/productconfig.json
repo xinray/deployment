@@ -66,12 +66,14 @@
             }
           ]
         }
-      ]
+      ],
+      "monitor": "Mars-API-Monitor"
     },
     {
       "productid": "marsws",
       "tasks": [
-      ]
+      ],
+      "monitor": "Mars-WS-Monitor"
     },
     {
       "productid": "marstest",
@@ -152,7 +154,8 @@
             }
           ]
         }
-      ]
+      ],
+      "monitor": "Mars-API-Monitor"
     }
   ],
   "account": [

@@ -165,17 +165,26 @@ class AutoBuildController extends Controller
 
     public function displayDashboard()
     {
+        $i = 0;
         foreach(config('data')['product'] as $product){
-            $i = 0;
-            $jenkinsjob = $product['tasks'];
-            $product_name = $product['productid'];
-            $deploy_hosts = HostInfo::getdeployhosts($product_name);
-            foreach($deploy_hosts as $host) {
-                $items[$i] = DeployHistory::getHostItem($host);
+            $j = 0;
+            $product_name[$i] = $product['productid'];
+            $monitor = $product['monitor'];
+            $monitor_url[$i] = 'http://ci.mars.changbaops.com/view/Mars-Monitor/job/'. $monitor .'/badge/icon';
+            $deploy_hosts[$i] = HostInfo::getdeployhosts($product_name[$i]);
+            if($deploy_hosts[$i] != null) {
+                foreach($deploy_hosts[$i] as $host) {
+                    $items[$i][$j] = DeployHistory::getHostItem($host);
+                    $j++;
+                }
+            } else {
+                $items[$i] = null;
             }
+            $i++;
         }
+        //dd($items);
 
-        return view('dashboard', ['items' => $items, 'jenkinsjob' => $jenkinsjob]);
+        return view('dashboard', ['items' => $items, 'product_name' => $product_name, 'monitor_url' => $monitor_url]);
     }
 
 }

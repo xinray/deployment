@@ -12,8 +12,12 @@ class HostInfo extends Model
 
     public static function getdeployhosts($product_name)
     {
+        $hosts = array();
         $host = Self::select('host')->where('productid', $product_name)->where('env', 'production')->get()->toArray();
-        $hosts = explode(",",$host[0]['host']);
+        //dd($host[0]['host']);
+        if($host != null) {
+            $hosts = explode(",",$host[0]['host']);
+        }
         return $hosts;
     }
 

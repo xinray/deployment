@@ -54,7 +54,9 @@ class DeployHistory extends Model
 
     public static function getHostItem($host)
     {
-        //Self::where
+        $item = Self::with('items')->where('hostsdeployed', $host)->orderBy('lastupdate', 'desc')->first()->toArray();
+        //dd($item);
+        return $item;
     }
 
     public function getItemChangeAttribute()
